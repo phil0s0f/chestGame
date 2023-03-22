@@ -6,13 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/buttonStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:onClick="clickStart"
+        android:text="Начать"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countChests" />
+
+    <TextView
+        android:id="@+id/plusRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickPlus"
+        android:text="+"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countRounds"
+        app:layout_constraintTop_toBottomOf="@+id/textCountRound" />
+
+    <TextView
+        android:id="@+id/plusTrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickPlus"
+        android:text="+"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countTraps"
+        app:layout_constraintTop_toBottomOf="@+id/textCountTrap" />
+
+    <TextView
+        android:id="@+id/plusChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickPlus"
+        android:text="+"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/countChests"
+        app:layout_constraintTop_toBottomOf="@+id/textCountChest" />
+
+    <TextView
+        android:id="@+id/minusChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickMinus"
+        android:text="-"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toStartOf="@+id/countChests"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCountChest" />
+
+    <TextView
+        android:id="@+id/minusTrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickMinus"
+        android:text="-"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toStartOf="@+id/countTraps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCountTrap" />
+
+    <TextView
+        android:id="@+id/minusRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickMinus"
+        android:text="-"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toStartOf="@+id/countRounds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCountRound" />
+
+    <TextView
+        android:id="@+id/textCountRound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Количество раундов"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCountTrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Количество ловушек"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countRounds" />
+
+    <TextView
+        android:id="@+id/countTraps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCountTrap" />
+
+    <TextView
+        android:id="@+id/textCountChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Количество сундуков"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countTraps" />
+
+    <TextView
+        android:id="@+id/countChests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCountChest" />
+
+    <TextView
+        android:id="@+id/countRounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="96sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCountRound" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
