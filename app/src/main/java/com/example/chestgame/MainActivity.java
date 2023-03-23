@@ -21,6 +21,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickStart(View view) {
+        TextView countRoundsText = findViewById(R.id.countRounds);
+        TextView countTrapsText = findViewById(R.id.countTraps);
+        TextView countChestsText = findViewById(R.id.countChests);
+
+        int countRounds = Integer.parseInt(countRoundsText.getText().toString());
+        int countTraps = Integer.parseInt(countTrapsText.getText().toString());
+        int countChests = Integer.parseInt(countChestsText.getText().toString());
+
+        Game game = new Game(countRounds, countTraps, countChests);
+
+        Intent intent = new Intent(this, GameActivity.class);
+
+        intent.putExtra(Game.class.getSimpleName(), game);
+        startActivity(intent);
     }
 
     public void clickPlus(View view) {
